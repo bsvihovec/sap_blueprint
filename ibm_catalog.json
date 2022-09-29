@@ -6,8 +6,216 @@
         {
             "label": "SAP prepared PowerVS instances",
             "name": "prepared_system",
+            "compliance": {
+                "controls": [
+                    {
+                        "profile_name": "SAP on IBM Power compliance v0.1.2",
+                        "control_id": "AC-2(1)"
+                    },
+                    {
+                        "profile_name": "SAP on IBM Power compliance v0.1.2",
+                        "control_id": "AC-2(a)"
+                    },
+                    {
+                        "profile_name": "SAP on IBM Power compliance v0.1.2",
+                        "control_id": "AC-2(c)"
+                    },
+                    {
+                        "profile_name": "SAP on IBM Power compliance v0.1.2",
+                        "control_id": "AC-2(i)"
+                    },
+                    {
+                        "profile_name": "SAP on IBM Power compliance v0.1.2",
+                        "control_id": "AC-2(j)"
+                    },
+                    {
+                        "profile_name": "SAP on IBM Power compliance v0.1.2",
+                        "control_id": "AC-3"
+                    },
+                    {
+                        "profile_name": "SAP on IBM Power compliance v0.1.2",
+                        "control_id": "AC-4"
+                    },
+                    {
+                        "profile_name": "SAP on IBM Power compliance v0.1.2",
+                        "control_id": "AC-6-0"
+                    },
+                    {
+                        "profile_name": "SAP on IBM Power compliance v0.1.2",
+                        "control_id": "AU-2(a)"
+                    },
+                    {
+                        "profile_name": "SAP on IBM Power compliance v0.1.2",
+                        "control_id": "CA-7(a)"
+                    },
+                    {
+                        "profile_name": "SAP on IBM Power compliance v0.1.2",
+                        "control_id": "CM-2"
+                    },
+                    {
+                        "profile_name": "SAP on IBM Power compliance v0.1.2",
+                        "control_id": "CM-8(4)"
+                    },
+                    {
+                        "profile_name": "SAP on IBM Power compliance v0.1.2",
+                        "control_id": "IA-4"
+                    },
+                    {
+                        "profile_name": "SAP on IBM Power compliance v0.1.2",
+                        "control_id": "SC-8-0"
+                    },
+                    {
+                        "profile_name": "SAP on IBM Power compliance v0.1.2",
+                        "control_id": "RA-5(a)"
+                    },
+                    {
+                        "profile_name": "SAP on IBM Power compliance v0.1.2",
+                        "control_id": "SC-12"
+                    },
+                    {
+                        "profile_name": "SAP on IBM Power compliance v0.1.2",
+                        "control_id": "SC-13"
+                    },
+                    {
+                        "profile_name": "SAP on IBM Power compliance v0.1.2",
+                        "control_id": "SC-36"
+                    }
+                ]
+            },
             "iam_permissions": [
-            ]
+                {
+                    "role_crns": [
+                        "crn:v1:bluemix:public:iam::::serviceRole:Manager"
+                    ],
+                    "service_name": "power-iaas"
+                },
+                {
+                    "role_crns": [
+                    "crn:v1:bluemix:public:iam::::serviceRole:Manager"
+                    ],
+                    "service_name": "appid"
+                },
+                {
+                    "role_crns": [
+                    "crn:v1:bluemix:public:iam::::serviceRole:Manager"
+                    ],
+                    "service_name": "cloud-object-storage"
+                },
+                {
+                    "role_crns": [
+                    "crn:v1:bluemix:public:iam::::serviceRole:Manager"
+                    ],
+                    "service_name": "hs-crypto"
+                },
+                {
+                    "role_crns": [
+                    "crn:v1:bluemix:public:iam::::role:Administrator"
+                    ],
+                    "service_name": "iam-identity"
+                },
+                {
+                    "role_crns": [
+                    "crn:v1:bluemix:public:iam::::serviceRole:Manager"
+                    ],
+                    "service_name": "kms"
+                },
+                {
+                    "role_crns": [
+                    "crn:v1:bluemix:public:iam::::role:Administrator"
+                    ],
+                    "service_name": "is.vpc"
+                }
+            ],
+            "architecture": {
+                "features": [
+                    {
+                        "description": "3",
+                        "title": "Power LPARs"
+                    },
+                    {
+                        "description": "Includes SSH and two private networks",
+                        "title": "Power Virtual Server"
+                    },
+                    {
+                        "description": "2",
+                        "title": "IBM Cloud Connections"
+                    },
+                    {
+                        "description": "SQUID proxy",
+                        "title": "Internet proxy"
+                    },
+                    {
+                        "description": "NFS server, NTP forwarder, and DNS forwarder",
+                        "title": "Additional management configurations"
+                    },
+                    {
+                        "title": "Separate VPC for management",
+                        "description": "Yes"
+                    },
+                    {
+                        "title": "Separate VPC for workloads",
+                        "description": "Yes"
+                    },
+                    {
+                        "title": "Virtual Server Instances for every subnet",
+                        "description": "Yes"
+                    },
+                    {
+                        "title": "Increases security with Key Management",
+                        "description": "Yes"
+                    },
+                    {
+                        "title": "Reduces failure events by using multizone regions",
+                        "description": "Yes"
+                    },
+                    {
+                        "title": "Collects and stores Internet Protocol (IP) traffic information with Activity Tracker and Flow Logs",
+                        "description": "Yes"
+                    },
+                    {
+                        "title": "Securely connects to multiple networks with a site-to-site virtual private network",
+                        "description": "Yes"
+                    },
+                    {
+                        "title": "Simplifies risk management and demonstrates regulatory compliance with Financial Services",
+                        "description": "Yes"
+                    },
+                    {
+                        "title": "Uses an edge VPC for secure access through the public internet",
+                        "description": "Yes, if enabled"
+                    },
+                    {
+                        "title": "Uses Floating IP address for access through the public internet",
+                        "description": "No"
+                    }
+                ],
+                "diagrams": [
+                    {
+                        "diagram": {
+                            "caption": "Full SAP environment provisioned on a secure infrastructure on VPC and extended by Power Virtual Servers",
+                            "url": "https://raw.githubusercontent.com/terraform-ibm-modules/terraform-ibm-powervs-sap/main/examples/ibm-catalog/prepared-system-solution/layer_deployment_target.svg",
+                            "metadata": []
+                        },
+                        "description": "SAP on secure Power Virtual Servers builds on the foundation of the 'Secure infrastructure on VPC for regulated industries' and 'Power infrastructure for regulated industries' by completing the deployment of a basic but expandable SAP system landscape. SAP is deployed on Power Virtual Server instances with initial instances of SAP Hana and SAP NetWeaver.\n\nThe network configuration done by the Power infrastructure provides connectivity to NFS servers where storage volumes are created for Hana and Netweaver. Other services such as DNS, NTP and NFS running the Workload VPC are also \nleveraged.\n\nRedundant IBM Cloud Connections provide the network bridge between the IBM Power infrastrucutre and the IBM VPC. \nAdditional instances of SAP NetWeaver may be configured.\n\nThe resulting SAP landscape leverages the services such as Activity Tracker, Cloud Object Storage, Key Management from the 'Secure infrastructure on VPC for regulated industries' and the network connectivity configuration provided by 'Power infrastructure for regulated industries'. "
+                    },
+                    {
+                        "diagram": {
+                            "caption": "Power infrastructure for regulated industries",
+                            "url": "https://raw.githubusercontent.com/terraform-ibm-modules/terraform-ibm-powervs-infrastructure/main/examples/ibm-catalog/standard-solution/layer_deployment_target_target.svg",
+                            "metadata": []
+                        },
+                        "description": "Building upon the management VPC and workload VPC that were previously created when you deployed Secure infrastructure on VPC for regulated industries, Power Infrastructure for regulated industries creates a Power Virtual Server instance. In the instance, Direct Link Connections provide consistent connectivity and access between the IBM Cloud Management VPC and Power Virtual Service networking zones.  \n\nAfter the creation of the Power Virtual Server instance, the management VPC provides a secure virtual machine to access the Power Virtual Servers. The workload VPC provides virtual machines that run critical services such as Domain Name System, Lightweight Directory Access Protocol, and Network File System that are accessible to the Power Virtual Server service and LPARs."
+                    },
+                    {
+                        "diagram": {
+                            "caption": "Secure infrastructure on VPC for regulated industries",
+                            "url": "https://raw.githubusercontent.com/terraform-ibm-modules/terraform-ibm-landing-zone/main/patterns/diagrams/svgs/vsi/vsi-vsi.drawio.svg",
+                            "metadata": []
+                        },
+                        "description": "Secure infrastructure on VPC for regulated industries is implemented with virtual servers running in a single, defined Virtual Private Cloud (VPC) which is used to manage the environment. The VPC is a multi-zoned, multi-subnet implementation that keeps your VPC secure and highly available.  Virtual Private Endpoints connect the VPCs to each other and to IBM Cloud services, including Key Protect, IAM, Container Registry, Object Storage, and any additional services. IBM Cloud services are configured for storage and key management.  \n\nIBM Cloud Flow Logs for VPC enable the collection, storage, and presentation of information about the Internet Protocol (IP) traffic that is going to and from network interfaces within your VPC. In addition, Activity Tracker logs events from enabled services. IBM Cloud Flow Logs for VPC and Activity Tracker are included in this configuration. Additional security services can be added such as Hyper Connect Crypto Service."
+                    }
+                ]
+            }
         }
     ]
 }
