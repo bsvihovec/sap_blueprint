@@ -1,0 +1,13 @@
+{
+    "name": "terraform-ibm-powervs-catalog-powervs-sap-systems",
+    "label": "SAP on secure Power Virtual Servers",
+    "version": "1.0.5",
+    "flavors": [
+        {
+            "label": "SAP prepared PowerVS instances",
+            "name": "prepared_system",
+            "iam_permissions": [
+            ]
+        }
+    ]
+}
